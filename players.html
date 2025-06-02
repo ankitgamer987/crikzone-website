@@ -8,44 +8,61 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f0f8ff;
+      background: #f5f5f5;
+      color: #333;
     }
 
     /* Header */
     header {
-      background: #0d6efd;
+      background: #1b5e20;
       color: white;
       padding: 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Nav Bar */
     nav {
-      margin-top: 10px;
+      background: #388e3c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      background: #2e7d32;
+      border-radius: 5px;
       font-weight: bold;
     }
     nav a:hover {
-      text-decoration: underline;
+      background: #66bb6a;
     }
 
-    /* Page Content */
-    main {
+    /* Main Content */
+    .container {
       padding: 30px;
-    }
-    h1 {
       text-align: center;
-      color: #0d6efd;
-      margin-bottom: 40px;
     }
+
+    h2 {
+      color: #1b5e20;
+      margin-bottom: 30px;
+    }
+
     .player-list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
     }
+
     .player-card {
       background: white;
       border-radius: 12px;
@@ -55,9 +72,11 @@
       transition: transform 0.3s;
       width: 180px;
     }
+
     .player-card:hover {
       transform: scale(1.05);
     }
+
     .player-card a {
       text-decoration: none;
       color: #0d6efd;
@@ -65,31 +84,32 @@
       font-weight: 600;
     }
 
-    /* Footer */
     footer {
-      margin-top: 50px;
-      text-align: center;
-      padding: 15px;
-      background-color: #0d6efd;
+      background: #1b5e20;
       color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h2>🏏 CrikZone - Player Profiles</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="server-rules.html">Server Rules</a>
-      <a href="match-rules.html">Match Rules</a>
-      <a href="t20-schedule.html">T20 Schedule</a>
-      <a href="t20-standings.html">T20 Standings</a>
-    </nav>
+    <h1>🏏 CrikZone Player Profiles</h1>
+    <p>Explore your favorite players and their records</p>
   </header>
 
-  <main>
-    <h1>Explore Our Players</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="server-rules.html">Server Rules</a>
+    <a href="match-rules.html">Match Rules</a>
+    <a href="t20-schedule.html">T20 Schedule</a>
+    <a href="t20-standings.html">T20 Standings</a>
+  </nav>
+
+  <div class="container">
+    <h2>👥 Meet the Players</h2>
     <div class="player-list">
       <div class="player-card">
         <a href="ankitgamer.html">AnkitGamer</a>
@@ -104,10 +124,10 @@
         <a href="rabjotsingh.html">Rabjot Singh</a>
       </div>
     </div>
-  </main>
+  </div>
 
   <footer>
-    © 2025 CrikZone | Powered by Discord and Cricket 24
+    © 2025 CrikZone • Built with ❤️ for Cricket 24 fans
   </footer>
 
 </body>
