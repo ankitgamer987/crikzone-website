@@ -1,2 +1,4 @@
 # crikzone-website
-Website for Discord server crkzone
+Website for Discord server crikzone
+
+Join here: https://discord.gg/wBxHrQEwdf
