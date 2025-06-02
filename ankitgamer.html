@@ -3,56 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <title>AnkitGamer - CrikZone Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fffaf4;
-      padding: 20px;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
     }
+
+    /* Header */
+    header {
+      background: #1b5e20;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Nav */
+    nav {
+      background: #388e3c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      background: #2e7d32;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #66bb6a;
+    }
+
+    /* Profile Container */
     .container {
       max-width: 800px;
-      margin: auto;
+      margin: 30px auto;
       background: white;
       border-radius: 10px;
       padding: 30px;
       box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
       text-align: center;
-      color: #0d6efd;
     }
+
+    h2 {
+      color: #0d6efd;
+      margin-top: 30px;
+    }
+
     .player-img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      display: block;
       margin: 20px auto;
       object-fit: cover;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 25px;
+      margin-top: 20px;
     }
+
     th, td {
       padding: 10px;
       border: 1px solid #ddd;
       text-align: center;
     }
+
     th {
       background-color: #0d6efd;
       color: white;
     }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>🏏 CrikZone Player Profile</h1>
+    <p>Performance Overview: AnkitGamer</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="players.html">All Players</a>
+    <a href="server-rules.html">Server Rules</a>
+    <a href="match-rules.html">Match Rules</a>
+    <a href="t20-schedule.html">T20 Schedule</a>
+    <a href="t20-standings.html">T20 Standings</a>
+  </nav>
+
   <div class="container">
-    <h1>AnkitGamer</h1>
     <img src="assets/AnkitGamer.png" alt="Player Image" class="player-img">
-    
+    <h2 id="playerName">AnkitGamer</h2>
     <div id="tables-container"></div>
   </div>
+
+  <footer>
+    © 2025 CrikZone • Built with ❤️ for Cricket 24 fans
+  </footer>
 
   <script>
     async function loadExcelData() {
@@ -63,12 +132,13 @@
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
       const jsonData = XLSX.utils.sheet_to_json(sheet);
 
-      const ankitData = jsonData.filter(row => row.Player === "AnkitGamer");
+      const playerName = "AnkitGamer";
+      const playerData = jsonData.filter(row => row.Player === playerName);
       const formats = ["T20", "ODI", "Test"];
       const container = document.getElementById("tables-container");
 
       formats.forEach(format => {
-        const data = ankitData.find(r => r.Format === format);
+        const data = playerData.find(r => r.Format === format);
         if (data) {
           const table = document.createElement("table");
           table.innerHTML = `
@@ -83,5 +153,6 @@
 
     loadExcelData();
   </script>
+
 </body>
 </html>
