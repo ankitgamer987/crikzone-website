@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>AnkitGamer - CrikZone Profile</title>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -50,23 +51,37 @@
     <h1>AnkitGamer</h1>
     <img src="https://via.placeholder.com/150" alt="Player Image" class="player-img">
     
-    <h2>T20 Stats</h2>
-    <table>
-      <tr><th>Matches</th><th>Runs</th><th>Wickets</th></tr>
-      <tr><td>10</td><td>320</td><td>8</td></tr>
-    </table>
-
-    <h2>ODI Stats</h2>
-    <table>
-      <tr><th>Matches</th><th>Runs</th><th>Wickets</th></tr>
-      <tr><td>5</td><td>190</td><td>3</td></tr>
-    </table>
-
-    <h2>Test Stats</h2>
-    <table>
-      <tr><th>Matches</th><th>Runs</th><th>Wickets</th></tr>
-      <tr><td>2</td><td>130</td><td>4</td></tr>
-    </table>
+    <div id="tables-container"></div>
   </div>
+
+  <script>
+    async function loadExcelData() {
+      const response = await fetch('data/player_stats.xlsx');
+      const arrayBuffer = await response.arrayBuffer();
+      const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+      const ankitData = jsonData.filter(row => row.Player === "AnkitGamer");
+      const formats = ["T20", "ODI", "Test"];
+      const container = document.getElementById("tables-container");
+
+      formats.forEach(format => {
+        const data = ankitData.find(r => r.Format === format);
+        if (data) {
+          const table = document.createElement("table");
+          table.innerHTML = `
+            <caption><h2>${format} Stats</h2></caption>
+            <tr><th>Matches</th><th>Runs</th><th>Wickets</th></tr>
+            <tr><td>${data.Matches}</td><td>${data.Runs}</td><td>${data.Wickets}</td></tr>
+          `;
+          container.appendChild(table);
+        }
+      });
+    }
+
+    loadExcelData();
+  </script>
 </body>
 </html>
