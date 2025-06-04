@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rabjot Singh - CrikZone Profile</title>
+  <title>Rahul - CrikZone Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   <style>
@@ -101,7 +101,7 @@
 
   <header>
     <h1>🏏 CrikZone Player Profile</h1>
-    <p>Performance Overview: Rabjot Singh</p>
+    <p>Performance Overview: Rahul</p>
   </header>
 
   <nav>
@@ -114,8 +114,8 @@
   </nav>
 
   <div class="container">
-    <img src="assets/rabjotsingh.png" alt="Player Image" class="player-img">
-    <h2>Rabjot Singh</h2>
+    <img src="assets/rahul.png" alt="Player Image" class="player-img">
+    <h2>rahul</h2>
     <div id="tables-container"></div>
   </div>
 
@@ -132,12 +132,12 @@
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
       const jsonData = XLSX.utils.sheet_to_json(sheet);
 
-      const rabjotData = jsonData.filter(row => row.Player === "rabjot_singh");
+      const rahulData = jsonData.filter(row => row.Player === "Rahul");
       const formats = ["T20", "ODI", "Test"];
       const container = document.getElementById("tables-container");
 
       formats.forEach(format => {
-        const data = rabjotData.find(r => r.Format === format);
+        const data = rahulData.find(r => r.Format === format);
         if (data) {
           const table = document.createElement("table");
           table.innerHTML = `
