@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CrikZone | Cricket 24 Esports Hub</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrikZone | T20 Tournament</title>
+
   <!-- SEO Meta Tags -->
   <meta name="description" content="CrikZone – Home of Cricket 24 esports leagues, match rules, schedules, and standings. Join our Discord to compete in fair, fun cricket tournaments!">
   <meta name="keywords" content="Cricket 24, esports, cricket league, T20, ODI, test matches, Discord cricket, CrikZone">
   <meta name="author" content="CrikZone Team">
-  
+
   <!-- Open Graph / Social Media Meta -->
   <meta property="og:title" content="CrikZone – Cricket 24 Esports Hub">
   <meta property="og:description" content="Join our Discord and compete in T20, ODI, and Test leagues with fair rules and real competition.">
@@ -19,17 +19,17 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <title>CrikZone | T20 Standings</title>
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #e3f2fd;
+      background: #fff8e1;
       margin: 0;
       padding: 0;
       color: #333;
     }
     header {
-      background: #1976d2;
+      background: #f57c00;
       color: white;
       padding: 20px;
       text-align: center;
@@ -39,7 +39,7 @@
       font-size: 2.2rem;
     }
     nav {
-      background: #2196f3;
+      background: #fb8c00;
       text-align: center;
       padding: 10px;
     }
@@ -48,33 +48,47 @@
       text-decoration: none;
       padding: 10px 20px;
       margin: 5px;
-      background: #1565c0;
+      background: #ef6c00;
       border-radius: 5px;
       font-weight: bold;
       display: inline-block;
     }
     nav a:hover {
-      background: #64b5f6;
+      background: #ffa726;
     }
     .container {
       padding: 40px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      text-align: center;
     }
-    .container h2 {
-      color: #0d47a1;
+    .division {
+      background: #fff3e0;
+      border-left: 8px solid #ef6c00;
+      border-radius: 10px;
+      margin: 2rem 0;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .note {
-      background: #e3f2fd;
+    .division h2 {
+      color: #e65100;
+    }
+    .team {
+      font-size: 1.1rem;
+      margin: 6px 0;
+    }
+    .format {
+      background: #ffe0b2;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: 30px;
-      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 1rem;
+    }
+    a {
+      color: #d84315;
+      font-weight: bold;
     }
     footer {
-      background: #1976d2;
+      background: #f57c00;
       color: white;
       text-align: center;
       padding: 12px;
@@ -85,28 +99,69 @@
 <body>
 
   <header>
-    <h1>📊 T20 League Standings</h1>
+    <h1>🏏 CrikZone T20 Tournament</h1>
   </header>
 
   <nav>
     <a href="index.html">🏠 Home</a>
     <a href="server-rules.html">📜 Server Rules</a>
     <a href="match-rules.html">⚔ Match Rules</a>
-    <a href="t20-schedule.html">📅 Schedule</a>
+    <a href="t20-standings.html">📊 Standings</a>
   </nav>
 
   <div class="container">
-    <h2>📈 Standings Coming Soon!</h2>
-    <div class="note">
-      The standings will be live here once the first T20 matches are played. <br>
-      Points, Net Run Rate, and Rankings will update automatically after every match. 🏆
-      <br><br>
-      Keep your eyes on this space!
+    <div class="division">
+      <h2>Division 1</h2>
+      <div class="team">QuantumQuirk – Peshawar Zalmi</div>
+      <div class="team">Rahul – Sunrisers Hyderabad</div>
+      <div class="team">RunMachine – Barbados Royals</div>
+      <div class="team">GentleGamer – Multan Sultans</div>
+      <div class="team">Mike – Jamaica Tallawahs</div>
+      <div class="team">db1_db2 – Chennai Super Kings</div>
+      <div class="team">CodeCricketMaster – Sydney Sixers</div>
+      <a href="division1_schedule.html">📅 View Division 1 Schedule</a>
+    </div>
+
+    <div class="division">
+      <h2>Division 2</h2>
+      <div class="team">newGuy – St Lucia Kings</div>
+      <div class="team">Sachin – Melbourne Renegades</div>
+      <div class="team">sammat – Karachi Kings</div>
+      <div class="team">Sricharan – Melbourne Stars</div>
+      <div class="team">Ved – Kolkata Knight Riders</div>
+      <div class="team">Crabby – Hobart Hurricanes</div>
+      <div class="team">dosu – Guyana Amazon Warriors</div>
+      <a href="division2_schedule.html">📅 View Division 2 Schedule</a>
+    </div>
+
+    <div class="division">
+      <h2>Division 3</h2>
+      <div class="team">ady_chak – Mumbai Indians</div>
+      <div class="team">Angel – Delhi Capitals</div>
+      <div class="team">Ava – Punjab Kings</div>
+      <div class="team">GeniiExE – Adelaide Strikers</div>
+      <div class="team">Prateesh – Perth Scorchers</div>
+      <div class="team">Bawandar – Sydney Thunder</div>
+      <div class="team">Maverick – Brisbane Heat</div>
+      <div class="team">AnkitGamer – Rajasthan Royals</div>
+      <a href="division3_schedule.html">📅 View Division 3 Schedule</a>
+    </div>
+
+    <div class="format">
+      <h2>📘 Tournament Format</h2>
+      <ul>
+        <li>Each team plays league matches within their division.</li>
+        <li>Top 4 teams from each division advance to their division's semifinals.</li>
+        <li>🏆 Top 2 teams (finalists) from <strong>Division 2</strong> get promoted to <strong>Division 1</strong>.</li>
+        <li>🏆 Top 2 teams from <strong>Division 3</strong> get promoted to <strong>Division 2</strong>.</li>
+        <li>⬇️ Bottom 2 teams from <strong>Division 1</strong> get relegated to <strong>Division 2</strong>.</li>
+        <li>⬇️ Bottom 2 teams from <strong>Division 2</strong> get relegated to <strong>Division 3</strong>.</li>
+      </ul>
     </div>
   </div>
 
   <footer>
-    © 2025 CrikZone • First standings update coming soon!
+    © 2025 CrikZone • Stay sharp & play fair!
   </footer>
 
 </body>
