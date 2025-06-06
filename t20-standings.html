@@ -1,25 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrikZone | T20 Tournament</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="CrikZone – Home of Cricket 24 esports leagues, match rules, schedules, and standings. Join our Discord to compete in fair, fun cricket tournaments!">
-  <meta name="keywords" content="Cricket 24, esports, cricket league, T20, ODI, test matches, Discord cricket, CrikZone">
-  <meta name="author" content="CrikZone Team">
-
-  <!-- Open Graph / Social Media Meta -->
-  <meta property="og:title" content="CrikZone – Cricket 24 Esports Hub">
-  <meta property="og:description" content="Join our Discord and compete in T20, ODI, and Test leagues with fair rules and real competition.">
-  <meta property="og:image" content="https://ankitgamer987.github.io/crikzone-website/assets/logo.png">
-  <meta property="og:url" content="https://ankitgamer987.github.io/crikzone-website/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T20 Standings | CrikZone</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -57,112 +42,124 @@
       background: #ffa726;
     }
     .container {
-      padding: 40px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
-    .division {
-      background: #fff3e0;
-      border-left: 8px solid #ef6c00;
-      border-radius: 10px;
-      margin: 2rem 0;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .division h2 {
+    h2 {
       color: #e65100;
+      text-align: center;
     }
-    .team {
-      font-size: 1.1rem;
-      margin: 6px 0;
-    }
-    .format {
-      background: #ffe0b2;
-      padding: 20px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff3e0;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 1rem;
+      overflow: hidden;
     }
-    a {
-      color: #d84315;
-      font-weight: bold;
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
     }
-    footer {
+    th {
       background: #f57c00;
       color: white;
-      text-align: center;
-      padding: 12px;
-      margin-top: 40px;
+    }
+    .player-name::before {
+      content: '\1F3C5';
+      margin-right: 6px;
+    }
+    .team-logo {
+      height: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>🏏 CrikZone T20 Tournament</h1>
+    <h1>📊 T20 Standings</h1>
   </header>
-
   <nav>
     <a href="index.html">🏠 Home</a>
     <a href="server-rules.html">📜 Server Rules</a>
     <a href="match-rules.html">⚔ Match Rules</a>
-    <a href="t20-standings.html">📊 Standings</a>
+    <a href="division1_schedule.html">📅 Division 1</a>
+    <a href="division2_schedule.html">📅 Division 2</a>
+    <a href="division3_schedule.html">📅 Division 3</a>
   </nav>
 
   <div class="container">
-    <div class="division">
-      <h2>Division 1</h2>
-      <div class="team">QuantumQuirk – Peshawar Zalmi</div>
-      <div class="team">Rahul – Sunrisers Hyderabad</div>
-      <div class="team">RunMachine – Barbados Royals</div>
-      <div class="team">GentleGamer – Multan Sultans</div>
-      <div class="team">Mike – Jamaica Tallawahs</div>
-      <div class="team">db1_db2 – Chennai Super Kings</div>
-      <div class="team">CodeCricketMaster – Sydney Sixers</div>
-      <a href="division1_schedule.html">📅 View Division 1 Schedule</a>
-    </div>
+    <h2>Division 1</h2>
+    <table id="div1"></table>
 
-    <div class="division">
-      <h2>Division 2</h2>
-      <div class="team">newGuy – St Lucia Kings</div>
-      <div class="team">Sachin – Melbourne Renegades</div>
-      <div class="team">sammat – Karachi Kings</div>
-      <div class="team">Sricharan – Melbourne Stars</div>
-      <div class="team">Ved – Kolkata Knight Riders</div>
-      <div class="team">Crabby – Hobart Hurricanes</div>
-      <div class="team">dosu – Guyana Amazon Warriors</div>
-      <a href="division2_schedule.html">📅 View Division 2 Schedule</a>
-    </div>
+    <h2>Division 2</h2>
+    <table id="div2"></table>
 
-    <div class="division">
-      <h2>Division 3</h2>
-      <div class="team">ady_chak – Mumbai Indians</div>
-      <div class="team">Angel – Delhi Capitals</div>
-      <div class="team">Ava – Punjab Kings</div>
-      <div class="team">GeniiExE – Adelaide Strikers</div>
-      <div class="team">Prateesh – Perth Scorchers</div>
-      <div class="team">Bawandar – Sydney Thunder</div>
-      <div class="team">Maverick – Brisbane Heat</div>
-      <div class="team">AnkitGamer – Rajasthan Royals</div>
-      <a href="division3_schedule.html">📅 View Division 3 Schedule</a>
-    </div>
-
-    <div class="format">
-      <h2>📘 Tournament Format</h2>
-      <ul>
-        <li>Each team plays league matches within their division.</li>
-        <li>Top 4 teams from each division advance to their division's semifinals.</li>
-        <li>🏆 Top 2 teams (finalists) from <strong>Division 2</strong> get promoted to <strong>Division 1</strong>.</li>
-        <li>🏆 Top 2 teams from <strong>Division 3</strong> get promoted to <strong>Division 2</strong>.</li>
-        <li>⬇️ Bottom 2 teams from <strong>Division 1</strong> get relegated to <strong>Division 2</strong>.</li>
-        <li>⬇️ Bottom 2 teams from <strong>Division 2</strong> get relegated to <strong>Division 3</strong>.</li>
-      </ul>
-    </div>
+    <h2>Division 3</h2>
+    <table id="div3"></table>
   </div>
 
-  <footer>
-    © 2025 CrikZone • Stay sharp & play fair!
+  <footer style="background:#f57c00;color:white;text-align:center;padding:12px;margin-top:40px;">
+    © 2025 CrikZone • Updated via Excel
   </footer>
 
+  <script>
+    const logos = {
+      "Peshawar Zalmi": "peshawar.png",
+      "Sunrisers Hyderabad": "srh.png",
+      "Barbados Royals": "barbados.png",
+      "Multan Sultans": "multan.png",
+      "Jamaica Tallawahs": "jamaica.png",
+      "Chennai Super Kings": "csk.png",
+      "Sydney Sixers": "sydney.png",
+      "St Lucia Kings": "stlucia.png",
+      "Melbourne Renegades": "renegades.png",
+      "Karachi Kings": "karachi.png",
+      "Melbourne Stars": "stars.png",
+      "Kolkata Knight Riders": "kkr.png",
+      "Hobart Hurricanes": "hobart.png",
+      "Guyana Amazon Warriors": "guyana.png",
+      "Mumbai Indians": "mi.png",
+      "Delhi Capitals": "delhi.png",
+      "Punjab Kings": "punjab.png",
+      "Adelaide Strikers": "adelaide.png",
+      "Perth Scorchers": "perth.png",
+      "Sydney Thunder": "thunder.png",
+      "Brisbane Heat": "heat.png",
+      "Rajasthan Royals": "rr.png"
+    };
+
+    function renderTable(data, tableId) {
+      const table = document.getElementById(tableId);
+      let html = '<tr><th>Player</th><th>Team</th><th>Matches</th><th>Wins</th><th>NRR</th><th>Points</th></tr>';
+      data.forEach(row => {
+        const logo = logos[row[1]] ? `<img src="assets/logos/${logos[row[1]]}" class="team-logo">` : '';
+        html += `<tr>
+          <td class="player-name">${row[0]}</td>
+          <td>${row[1]} ${logo}</td>
+          <td>${row[2]}</td>
+          <td>${row[3]}</td>
+          <td>${row[4]}</td>
+          <td>${row[5]}</td>
+        </tr>`;
+      });
+      table.innerHTML = html;
+    }
+
+    fetch('data/t20_standings.xlsx')
+      .then(res => res.arrayBuffer())
+      .then(ab => {
+        const wb = XLSX.read(ab, {type: 'array'});
+        const sheet = wb.Sheets[wb.SheetNames[0]];
+        const data = XLSX.utils.sheet_to_json(sheet, {header: 1}).slice(1); // Skip header if present
+        renderTable(data.slice(0, 7), 'div1');
+        renderTable(data.slice(7, 14), 'div2');
+        renderTable(data.slice(14, 22), 'div3');
+      });
+  </script>
 </body>
 </html>

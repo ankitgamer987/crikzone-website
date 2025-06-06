@@ -74,7 +74,28 @@
     }
     .team {
       font-size: 1.1rem;
-      margin: 6px 0;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .player-name {
+      color: #d84315;
+      font-weight: bold;
+    }
+    .team-name {
+      color: #2e7d32;
+      font-style: italic;
+    }
+    .team img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .player-icon::before {
+      content: '🧢';
+      margin-right: 5px;
     }
     .format {
       background: #ffe0b2;
@@ -109,41 +130,47 @@
     <a href="t20-standings.html">📊 Standings</a>
   </nav>
 
+
+
+
+
+
+
   <div class="container">
     <div class="division">
       <h2>Division 1</h2>
-      <div class="team">QuantumQuirk – Peshawar Zalmi</div>
-      <div class="team">Rahul – Sunrisers Hyderabad</div>
-      <div class="team">RunMachine – Barbados Royals</div>
-      <div class="team">GentleGamer – Multan Sultans</div>
-      <div class="team">Mike – Jamaica Tallawahs</div>
-      <div class="team">db1_db2 – Chennai Super Kings</div>
-      <div class="team">CodeCricketMaster – Sydney Sixers</div>
+      <div class="team"><span class="player-name player-icon">QuantumQuirk</span> – <span class="team-name">Peshawar Zalmi</span> <img src="assets/logos/peshawar.png"></div>
+      <div class="team"><span class="player-name player-icon">Rahul</span> – <span class="team-name">Sunrisers Hyderabad</span> <img src="assets/logos/srh.png"></div>
+      <div class="team"><span class="player-name player-icon">RunMachine</span> – <span class="team-name">Barbados Royals</span> <img src="assets/logos/barbados.png"></div>
+      <div class="team"><span class="player-name player-icon">GentleGamer</span> – <span class="team-name">Multan Sultans</span> <img src="assets/logos/multan.png"></div>
+      <div class="team"><span class="player-name player-icon">Mike</span> – <span class="team-name">Jamaica Tallawahs</span> <img src="assets/logos/jamaica.png"></div>
+      <div class="team"><span class="player-name player-icon">db1_db2</span> – <span class="team-name">Chennai Super Kings</span> <img src="assets/logos/csk.png"></div>
+      <div class="team"><span class="player-name player-icon">CodeCricketMaster</span> – <span class="team-name">Sydney Sixers</span> <img src="assets/logos/sydney.png"></div>
       <a href="division1_schedule.html">📅 View Division 1 Schedule</a>
     </div>
 
     <div class="division">
       <h2>Division 2</h2>
-      <div class="team">newGuy – St Lucia Kings</div>
-      <div class="team">Sachin – Melbourne Renegades</div>
-      <div class="team">sammat – Karachi Kings</div>
-      <div class="team">Sricharan – Melbourne Stars</div>
-      <div class="team">Ved – Kolkata Knight Riders</div>
-      <div class="team">Crabby – Hobart Hurricanes</div>
-      <div class="team">dosu – Guyana Amazon Warriors</div>
+      <div class="team"><span class="player-name player-icon">newGuy</span> – <span class="team-name">St Lucia Kings</span> <img src="assets/logos/stlucia.png"></div>
+      <div class="team"><span class="player-name player-icon">Sachin</span> – <span class="team-name">Melbourne Renegades</span> <img src="assets/logos/renegades.png"></div>
+      <div class="team"><span class="player-name player-icon">sammat</span> – <span class="team-name">Karachi Kings</span> <img src="assets/logos/karachi.png"></div>
+      <div class="team"><span class="player-name player-icon">Sricharan</span> – <span class="team-name">Melbourne Stars</span> <img src="assets/logos/stars.png"></div>
+      <div class="team"><span class="player-name player-icon">Ved</span> – <span class="team-name">Kolkata Knight Riders</span> <img src="assets/logos/kkr.png"></div>
+      <div class="team"><span class="player-name player-icon">Crabby</span> – <span class="team-name">Hobart Hurricanes</span> <img src="assets/logos/hobart.png"></div>
+      <div class="team"><span class="player-name player-icon">dosu</span> – <span class="team-name">Guyana Amazon Warriors</span> <img src="assets/logos/guyana.png"></div>
       <a href="division2_schedule.html">📅 View Division 2 Schedule</a>
     </div>
 
     <div class="division">
       <h2>Division 3</h2>
-      <div class="team">ady_chak – Mumbai Indians</div>
-      <div class="team">Angel – Delhi Capitals</div>
-      <div class="team">Ava – Punjab Kings</div>
-      <div class="team">GeniiExE – Adelaide Strikers</div>
-      <div class="team">Prateesh – Perth Scorchers</div>
-      <div class="team">Bawandar – Sydney Thunder</div>
-      <div class="team">Maverick – Brisbane Heat</div>
-      <div class="team">AnkitGamer – Rajasthan Royals</div>
+      <div class="team"><span class="player-name player-icon">ady_chak</span> – <span class="team-name">Mumbai Indians</span> <img src="assets/logos/mi.png"></div>
+      <div class="team"><span class="player-name player-icon">Angel</span> – <span class="team-name">Delhi Capitals</span> <img src="assets/logos/delhi.png"></div>
+      <div class="team"><span class="player-name player-icon">Ava</span> – <span class="team-name">Punjab Kings</span> <img src="assets/logos/punjab.png"></div>
+      <div class="team"><span class="player-name player-icon">GeniiExE</span> – <span class="team-name">Adelaide Strikers</span> <img src="assets/logos/adelaide.png"></div>
+      <div class="team"><span class="player-name player-icon">Prateesh</span> – <span class="team-name">Perth Scorchers</span> <img src="assets/logos/perth.png"></div>
+      <div class="team"><span class="player-name player-icon">Bawandar</span> – <span class="team-name">Sydney Thunder</span> <img src="assets/logos/thunder.png"></div>
+      <div class="team"><span class="player-name player-icon">Maverick</span> – <span class="team-name">Brisbane Heat</span> <img src="assets/logos/heat.png"></div>
+      <div class="team"><span class="player-name player-icon">AnkitGamer</span> – <span class="team-name">Rajasthan Royals</span> <img src="assets/logos/rr.png"></div>
       <a href="division3_schedule.html">📅 View Division 3 Schedule</a>
     </div>
 
