@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T20 Knockouts | CrikZone</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8e1;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #f57c00;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #fb8c00;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      background: #ef6c00;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #ffa726;
+    }
+    h2 {
+      color: #e65100;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .bracket {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      margin-top: 40px;
+    }
+    .match-box {
+      background: #ffe0b2;
+      padding: 20px;
+      border-radius: 12px;
+      width: 260px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.15);
+      text-align: center;
+      position: relative;
+    }
+    .match-box h3 {
+      color: #e65100;
+      margin-top: 0;
+    }
+    .match-box.final h3 {
+      color: #d84315;
+    }
+    .team-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .team-logo {
+      height: 22px;
+    }
+    .vs-text {
+      margin: 12px 0;
+      font-weight: bold;
+    }
+    .connector {
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      height: 2px;
+      background: #e65100;
+    }
+    .left-connector {
+      right: -60px;
+    }
+    .right-connector {
+      left: -60px;
+    }
+    .middle-arrow {
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 10px solid #e65100;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏏 T20 Knockouts</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="server-rules.html">📜 Server Rules</a>
+    <a href="match-rules.html">⚔ Match Rules</a>
+    <a href="t20-schedule.html">🗓️ T20 Schedule</a>
+    <a href="t20-standings.html">🗓️ T20 Standings</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Repeat this section for each division -->
+    <h2>Division 1</h2>
+    <div class="bracket">
+      <div class="match-box">
+        <h3>Semi Final 1</h3>
+        <div class="team-line">
+          <img src="assets/logos/barbados.png" class="team-logo">
+          <span>RunMachine (Barbados Royals)</span>
+        </div>
+        <div class="vs-text">vs</div>
+        <div class="team-line">
+          <img src="assets/logos/sydney.png" class="team-logo">
+          <span>CodeCricketMaster (Sydney Sixers)</span>
+        </div>
+        <div class="connector left-connector"></div>
+      </div>
+
+      <div class="match-box final">
+        <h3>Final</h3>
+        <p><em>Winner SF1</em> vs <em>Winner SF2</em></p>
+      </div>
+
+      <div class="match-box">
+        <h3>Semi Final 2</h3>
+        <div class="team-line">
+          <img src="assets/logos/peshawar.png" class="team-logo">
+          <span>QuantumQuirk (Peshawar Zalmi)</span>
+        </div>
+        <div class="vs-text">vs</div>
+        <div class="team-line">
+          <img src="assets/logos/multan.png" class="team-logo">
+          <span>GentleGamer (Multan Sultans)</span>
+        </div>
+        <div class="connector right-connector"></div>
+      </div>
+    </div>
+
+    <h2>Division 2</h2>
+    <div class="bracket">
+      <div class="match-box">
+        <h3>Semi Final 1</h3>
+        <div class="team-line">
+          <img src="assets/logos/guyana.png" class="team-logo">
+          <span>dosu (Guyana Amazon Warriors)</span>
+        </div>
+        <div class="vs-text">vs</div>
+        <div class="team-line">
+          <img src="assets/logos/stlucia.png" class="team-logo">
+          <span>newGuy (St Lucia Kings)</span>
+        </div>
+        <div class="connector left-connector"></div>
+      </div>
+
+      <div class="match-box final">
+        <h3>Final</h3>
+        <p><em>Winner SF1</em> vs <em>Winner SF2</em></p>
+      </div>
+
+      <div class="match-box">
+        <h3>Semi Final 2</h3>
+        <div class="team-line">
+          <img src="assets/logos/kkr.png" class="team-logo">
+          <span>Ved (Kolkata Knight Riders)</span>
+        </div>
+        <div class="vs-text">vs</div>
+        <div class="team-line">
+          <img src="assets/logos/karachi.png" class="team-logo">
+          <span>sammat (Karachi Kings)</span>
+        </div>
+        <div class="connector right-connector"></div>
+      </div>
+    </div>
+
+    <h2>Division 3</h2>
+    <div class="bracket">
+      <div class="match-box">
+        <h3>Semi Final 1</h3>
+        <div class="team-line">
+          <img src="assets/logos/delhi.png" class="team-logo">
+          <span>Angel (Delhi Capitals)</span>
+        </div>
+        <div class="vs-text">vs</div>
+        <div class="team-line">
+          <img src="assets/logos/heat.png" class="team-logo">
+          <span>Maverick (Brisbane Heat)</span>
+        </div>
+        <div class="connector left-connector"></div>
+      </div>
+
+      <div class="match-box final">
+        <h3>Final</h3>
+        <p><em>Winner SF1</em> vs <em>Winner SF2</em></p>
+      </div>
+
+      <div class="match-box">
+        <h3>Semi Final 2</h3>
+        <div class="team-line">
+          <img src="assets/logos/punjab.png" class="team-logo">
+          <span>Ava (Punjab Kings)</span>
+        </div>
+        <div class="vs-text">vs</div>
+        <div class="team-line">
+          <img src="assets/logos/mi.png" class="team-logo">
+          <span>ady_chak (Mumbai Indians)</span>
+        </div>
+        <div class="connector right-connector"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="background:#f57c00;color:white;text-align:center;padding:12px;margin-top:40px;">
+    © 2025 CrikZone • Updated via Excel
+  </footer>
+</body>
+</html>
